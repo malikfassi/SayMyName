@@ -1,0 +1,27 @@
+version: 1
+#disable_existing_loggers: false
+
+formatters:
+  standard:
+    format: '[%(asctime)s][%(levelname)s] in %(module)s : %(message)s'
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: standard
+    stream: ext://sys.stdout
+
+  error_file_handler:
+    level: INFO
+    class: logging.handlers.RotatingFileHandler
+    formatter: standard
+    maxBytes: 10485760
+    backupCount: 20
+    encoding: utf8
+    filename: gate.log
+
+root:
+  level: DEBUG
+  handlers: [console, error_file_handler]
+  propagate: True

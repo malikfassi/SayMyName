@@ -1,0 +1,26 @@
+COMMON: &common
+    HOST: '127.0.0.1'
+    PORT: 6200
+    AUTH_TOKEN: 'BXcJebbmeobULfkFa4MzZBWxC4w1KY9M'
+    DEBUG: True
+    AUTH_TOKEN_HEADER_NAME: 'X-Ledger-Auth'
+
+PRODUCTION: &production
+  <<: *common
+  DATABASE:
+    ENGINE: 'PostgreSQL'
+    SCHEMA: 'team_rocket'
+    HOST: 'localhost'
+    USER: 'vault'
+    PASSWORD: 'vault'
+    PORT: 5432
+  DEBUG: True
+
+TEST: &test
+  <<: *production
+  DEBUG: True
+
+DEVELOPMENT: &development
+  <<: *test
+  DEBUG: True
+
