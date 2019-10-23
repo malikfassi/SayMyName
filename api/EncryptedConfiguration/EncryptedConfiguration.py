@@ -12,9 +12,7 @@ class EncryptedConfiguration(BaseModel):
 
     @staticmethod
     def get_configuration(client_id):
-        print("hey")
         data = EncryptedConfiguration.get(EncryptedConfiguration.client_id == client_id)
-        print("lust")
         return data
 
     def serialize(self):

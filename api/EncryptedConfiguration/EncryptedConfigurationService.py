@@ -9,7 +9,6 @@ from api.common.singleton import singleton
 class EncryptedConfigurationService:
 
     def get(self, client_id):
-        print("gougou")
         return EncryptedConfiguration.get_configuration(client_id).serialize()
 
     def save(self, data):
@@ -23,7 +22,6 @@ class EncryptedConfigurationService:
 
     def _extract_data(self, data):
         try:
-            print(data)
             return data['client_id'], data['blob']
         except KeyError:
             raise BadFormatException
