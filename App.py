@@ -3,14 +3,13 @@ import logging
 from flask import make_response, jsonify
 from flask_cors import CORS
 
+from api.EncryptedConfiguration.EncryptedConfiguration import EncryptedConfiguration
 from api.common.CommonException import CommonException
 from api.common.Database import Database
 from api.common.Logging import Logging
 from api.common.configuration.Config import Flask
 from api.common.configuration.ConfigService import ConfigService
 from api.common.models.BaseModel import database_proxy
-from api.materials.Materials import Material
-from api.nanoX.NanoX import NanoX
 
 
 class App(Flask):
@@ -57,7 +56,7 @@ class App(Flask):
         return db
 
     def create_tables(self):
-        self.db.db_instance.create_tables([NanoX, Material], safe=True)
+        self.db.db_instance.create_tables([EncryptedConfiguration], safe=True)
 
     def register_routes(self):
         # Routes registration

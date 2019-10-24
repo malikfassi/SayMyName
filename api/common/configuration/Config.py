@@ -5,15 +5,17 @@ from flask import Flask as BaseFlask, Config as BaseConfig
 
 
 class Config(BaseConfig):
-    global_configuration_env_prefix = 'ISO9001'
+    global_configuration_env_prefix = 'TEAM_ROCKET_'
     global_configuration = [
         'HOST',
         'PORT',
+        'AUTH_TOKEN',
+        'AUTH_TOKEN_HEADER_NAME',
     ]
     databases_allowed = [
         'PostgreSQL'
     ]
-    sql_configuration_env_prefix = 'ISO9001'
+    sql_configuration_env_prefix = 'TEAM_ROCKET_DB'
     sql_configuration = [
         'HOST',
         'PORT',

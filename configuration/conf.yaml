@@ -1,13 +1,15 @@
 COMMON: &common
     HOST: '127.0.0.1'
-    PORT: 6300
+    PORT: 6200
+    AUTH_TOKEN: 'BXcJebbmeobULfkFa4MzZBWxC4w1KY9M'
     DEBUG: True
+    AUTH_TOKEN_HEADER_NAME: 'X-Ledger-Auth'
 
 PRODUCTION: &production
   <<: *common
   DATABASE:
     ENGINE: 'PostgreSQL'
-    SCHEMA: 'iso9001'
+    SCHEMA: 'team_rocket'
     HOST: 'localhost'
     USER: 'vault'
     PASSWORD: 'vault'

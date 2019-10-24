@@ -30,4 +30,5 @@ class ConfigService:
             self.logger.info(f'Initializing gate with the following configuration : ')
             self.logger.info(f'PORT = {self.get("PORT")}')
             self.logger.info(f'HOST = {self.get("HOST")}')
+            self.logger.info(f'AUTH_TOKEN_HEADER_NAME = {self.get("AUTH_TOKEN_HEADER_NAME")}')
             self.logger.info('****************************************************')
