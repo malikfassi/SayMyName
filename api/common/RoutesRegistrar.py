@@ -1,12 +1,14 @@
-from api.EncryptedConfiguration.EncryptedConfigurationController import EncryptedConfigurationController
 from api.common.StatusController import StatusController
+from api.materials.MaterialsController import MaterialsController
+from api.nanoX.NanoXController import NanoXController
 
 
 class RoutesRegistrar:
 
     BLUEPRINTS = [
         StatusController.status_routes,
-        EncryptedConfigurationController.encrypted_configuration_routes
+        MaterialsController.material_routes,
+        NanoXController.nanox_routes
     ]
 
     def __init__(self, app):
