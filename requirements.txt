@@ -57,7 +57,7 @@ protobuf==3.5.1
 psycopg2-binary==2.7.6.1
 ptyprocess==0.6.0
 pudb==2019.1
-py==1.8.0
+py==1.10.0
 pycparser==2.19
 pycrypto==2.6.1
 pycryptodomex==3.8.2
