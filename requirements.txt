@@ -21,7 +21,7 @@ elasticsearch-dsl==6.1.0
 fakeredis==1.0.3
 fancycompleter==0.8
 Flask==1.0.2
-Flask-Cors==3.0.3
+Flask-Cors==3.0.9
 future==0.17.1
 gunicorn==19.8.1
 hidapi==0.7.99.post21
